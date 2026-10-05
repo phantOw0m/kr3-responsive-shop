@@ -1,3 +1,18 @@
+:root {
+    --color-primary: #ce8054;
+    --color-primary-dark: #b35340;
+    --color-bg-dark: #4b2b31;
+    --color-accent: #6F3637;
+    --color-text: #ffffff;
+    --color-text-dark: #233342;
+    --color-black: #000000;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --radius-sm: 6px;
+    --radius-md: 30px;
+}
+
 /* 
   Универсальное правило для всех элементов.
   border-box делает расчёт размеров более понятным:
@@ -7,188 +22,484 @@
   box-sizing: border-box;
 }
 
-/*
-  Убираем стандартный внешний отступ браузера у body.
-  Без этого вокруг страницы может появиться белая рамка.
-*/
+/*Основные стили для нескольких страниц и элементов*/
+main {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+/*Тексты внутри хиро блоков*/
+.hero h2 { 
+  text-align: left;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+.hero p {
+  color: var(--color-text);
+  text-align: left;
+  font-size: 18px;
+}
+/*Тексты внутри хиро блоков*/
+
+.main-about p, .contacts-info__text p { /*Абзацы на главной + в контактах*/
+  color: var(--color-text);
+  margin: 30px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.main-nav h1, .contacts-info h1 { /*Заголовок на главной + в контактах*/
+  text-align: left;
+  color: var(--color-text);
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.section h1 { /*Заголовок в центре у каталога + оформление заказа*/
+  text-align: center;
+  color: var(--color-text);
+}
+
+.main-about h2, .contacts-info__text h2{ /*Подзаголовки у текстов наглавной странице + в контактах*/
+  text-align: left;
+  color: var(--color-bg-dark);
+  margin-left: 30px;
+}
+
+.advantages h2, .section h2 { /*Два подзаголовка посередине на главной странице*/
+  color: var(--color-bg-dark);
+  text-align: center;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  color: #222222;
-  background-color: #ffffff;
+  color: var(--color-text);
+  background-image: linear-gradient(rgba(75, 43, 49, 0.7), rgba(75, 43, 49, 0.7)), url("../images/Back.png");
+  background-repeat: repeat;
+  background-size: 20%;
 }
 
-header,
-main,
-footer {
-  padding: 20px;
-}
-
+/*ШАПКА*/
 header {
-  background-color: #f2f2f2;
+    background: linear-gradient(to right, var(--color-bg-dark), var(--color-accent));
+    color: var(--color-text);
+    position: sticky;   
+    top: 0;            
+    z-index: 999; /*Порядок наложения*/
+    padding: 20px 0;       
 }
 
-footer {
-  background-color: #f2f2f2;
-}
-
-section {
-  margin-bottom: 24px;
-}
-
-section h2 {
-  margin-top: 0;
-}
-
-/*
-  Задаём внутренние отступы для основных областей страницы.
-  Это делает содержимое визуально отделённым от краёв окна браузера.
-*/
-header,
-main,
-footer {
-  padding: 20px;
-}
-
-/*
-  Оформляем шапку страницы.
-  Пока используется простой светло-серый фон.
-*/
-header {
-  background-color: #f2f2f2;
-}
-
-/*
-  Оформляем подвал страницы тем же фоном,
-  чтобы визуально отделить его от основного содержимого.
-*/
-footer {
-  background-color: #f2f2f2;
-}
-
-/*
-  Ограничиваем ширину содержимого шапки,
-  чтобы оно не растягивалось слишком сильно на широких экранах.
-*/
-.site-header {
-  max-width: 1100px;
+.site-header__content{
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;      
+  justify-content: flex-start; 
 }
 
-/*
-  Оформляем текстовый логотип.
-*/
-.site-logo {
+.site-header {
+    display: flex;
+    align-items: center;  
+    position: relative;        
+    gap: 30px;                    
+    margin-bottom: 20px;          
+}
+
+.logo{
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;   
+  text-decoration: none; 
+  flex-shrink: 0;
+}
+
+.logo__text {
+  font-size: 20px;
   font-weight: bold;
-  text-decoration: none;
-  color: #222222;
+  color: var(--color-black);
+  font-style: italic;
 }
 
-/*
-  Убираем стандартные отступы и маркеры списка навигации.
-*/
+.logo__img {
+  width: 70px;
+  height: 70px;
+  display: block;
+}
+
+.site-header__title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 0;
+  font-size: 32px;
+  white-space: nowrap; /*<Без переноса*/
+}
+
 .site-nav__list {
   padding: 0;
-  margin: 16px 0 0;
+  margin: 0;
   list-style: none;
+  display: flex;           
+  gap: 60px;               
+  justify-content: center;
 }
 
-/*
-  Добавляем расстояние между пунктами меню.
-*/
 .site-nav__list li {
+  margin-bottom: 0;
+}
+
+/*Сами ссылки*/
+.site-nav__list a {
+  color: var(--color-text);
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.site-nav__list a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+/*Сами ссылки*/
+/*ШАПКА*/
+
+/*ГЛАВНАЯ СТРАНИЦА*/
+.main-nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 20px;
   margin-bottom: 8px;
 }
 
-/*
-  Оформляем ссылки меню.
-*/
-.site-nav__list a {
-  color: #0057b8;
-  text-decoration: none;
-}
-
-/*
-  При наведении мыши подчёркиваем ссылку.
-  Подробно состояния интерфейса будут рассмотрены в практической работе 1.7.
-*/
-.site-nav__list a:hover {
+.main-nav a:hover {
+  font-weight: bold;
   text-decoration: underline;
 }
 
-/*
-  Hero-блок — первый крупный блок страницы.
-  Он визуально отделяется от остальных разделов фоном и отступами.
-*/
+/*Кнопка перехода к товарам*/
 .hero {
   max-width: 1100px;
   margin: 0 auto 32px;
   padding: 32px 20px;
-  background-color: #eef5ff;
-  border-radius: 12px;
+  background-color: rgba(206, 128, 84, 0.4);
+  border-left: 20px solid var(--color-accent);
+  border-radius: 30px;
 }
 
-/*
-  Общий класс для разделов страницы.
-*/
+.main-hero__button {
+  display: inline-block;
+  padding: 10px 16px;
+  color: var(--color-text);
+  background-color: var(--color-accent);
+  text-decoration: none;
+  border-radius: 30px;
+
+  animation-name: button-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.main-hero__button:hover {
+  background-color: var(--color-primary);
+}
+
+@keyframes button-animation{
+  0%{
+    transform: scale(0.8);
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.8);
+  }
+}
+/*Кнопка перехода к товарам*/
+
+/*Преимущества*/
+.advantages {
+    max-width: 1100px;
+    margin: 0 auto 32px; 
+}
+
+.advantages__title {
+    text-align: left  ;
+    color: var(--color-text);
+    font-style: italic  ;
+}
+
+.advantages__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /*две колонки*/
+    gap: 40px 60px; /*строки - столбцы*/
+    font-size: 18px;
+    text-align: justify;
+}
+/*Преимущества*/
+
+/*Контакты хиро блок*/
+.main-hero__socials {
+    display: flex;                            
+    align-items: center;        
+}
+
+.main-hero__link {
+    display: inline-flex;      
+}
+
+.main-hero__link img {
+    width: 60px;
+    height: 60px;
+    gap: 65px;;
+    display: block;             
+}
+/*Контакты хиро блок*/
+
+/*Плашка ХИТ на карточке товара*/
+.catalog-card__badge { 
+    position: absolute;         
+    top: 90px;
+    right: 20px;             
+    background-color: var(--color-primary);  
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 20px 45px;
+    border-radius: 5px;
+    z-index: 2; 
+    transform: rotate(5deg);        
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 15% 50%);
+}
+/*Плашка ХИТ на карточке товара*/
+/*ГЛАВНАЯ СТРАНИЦА*/
+
+/*КАТАЛОГ*/
 .section {
   max-width: 1100px;
   margin: 0 auto 32px;
 }
 
-/*
-  Убираем лишний верхний отступ у заголовков разделов.
-*/
-.section h2 {
-  margin-top: 0;
+/* Все карточки товаров на странице каталога*/
+.catalog-grid {
+    display: flex;         
+    flex-wrap: wrap;        
+    gap: 20px;              
+    justify-content: flex-start; 
 }
 
-/*
-  Карточка товара — самостоятельный блок.
-  На следующих занятиях карточки будут доработаны и выстроены в сетку.
-*/
-.product-card {
-  margin-bottom: 16px;
-  padding: 16px;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-  background-color: #ffffff;
+.catalog-card {
+  padding: 15px;
+  width: calc(50% - 10px); 
+  border: 10px solid var(--color-accent);
+  border-radius: 30px;
+  background-color: rgba(206, 128, 84, 0.4);
+  box-sizing: border-box;
+  text-align: center;
+  position: relative; /*Чтобы плашку от него размещать*/
 }
 
-/*
-  Убираем лишний верхний отступ у заголовка карточки.
-*/
-.product-card h3 {
-  margin-top: 0;
+.catalog-card img{
+  width: 400px;
+  height: 340px;
+  transition: transform 0.3s ease;
 }
 
-/*
-  Пока это обычная ссылка, но визуально она оформляется как кнопка.
-*/
-.button {
+.catalog-card img:hover{
+  transform: scale(1.1);
+  cursor: help;
+}
+
+/*Текст карточек*/
+.catalog-card h2{
+  font-weight: bold;
+  color: var(--color-text);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.catalog-card__text {
+  margin-top: 18px;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+.catalog-card__price {
+  margin-top: 0px;
+  color: var(--color-text);
+  font-size: 20px;;
+}
+/*Текст карточек*/
+
+/*Кнопка заказать (в каталоге и в карточке товара)*/
+.button-order{
   display: inline-block;
   padding: 10px 16px;
-  color: #ffffff;
-  background-color: #0057b8;
+  color: var(--color-text);
+  background-color: var(--color-accent);
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 30px;
 }
 
-/*
-  Простое состояние наведения для кнопки.
-*/
-.button:hover {
-  background-color: #003f86;
+.button-order:hover{
+  background-color: var(--color-primary);
+  cursor:grab;
+  scale: 1.1;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/*Кнопка заказать (в каталоге и в карточке товара)*/
+/*КАТАЛОГ*/
+
+/*Карточка товара подробная*/
+.product-card-grid{
+  display: flex; /*Два столбца: слева картинка, справа - текст*/
+  align-items: flex-start;  
+  gap: 40px;
 }
 
-/*
-  Дополнительный информационный блок.
-*/
-.aside-info {
-  max-width: 1100px;
-  margin: 0 auto 32px;
-  padding: 16px;
-  border-left: 4px solid #0057b8;
-  background-color: #f7f7f7;
+.product-card{
+  background-image: url("../images/Background.jpg");
+  background-position-y: bottom 20%;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  border: 10px solid var(--color-accent);
+  border-radius: 30px;
+
+  width: 800px;
+  height: 600px;
+
+  display: flex; /*Чтобы позиционировать*/
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+} 
+
+.product-card img{
+  width: 70%;
+  height: auto;
+  display: block;
+  transform: translateY(60px);
 }
+
+.product-card__text{
+  flex: 1; /*Заняла оставшееся место*/
+  display: flex;
+  flex-direction: column; /*Элементы правого столбца все в столбик*/
+  color: var(--color-text);
+}
+
+/*Таблица с калорийностью*/
+.product__table {
+    width: 100%;
+    border-collapse: collapse; /*Убрать двойную границу*/
+    margin-top: 20px;
+    background-color: rgba(206, 128, 84, 0.4);
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+.product__table th {
+    text-align: left;
+    padding: 12px 0;
+    padding: 12px 16px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.product__table td {
+    padding: 12px 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.product__table th:not(:last-child),
+.product__table td:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.product__table tbody tr:last-child td {
+    border-bottom: none;
+}
+/*Таблица с калорийностью*/
+/*Карточка товара подробная*/
+
+/*СТРАНИЦА ЗАКАЗА + ЗАЯВКА НА ЖАЛОБУ*/
+.order-form__box {
+  color: var(--color-text);
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+.order-form__input {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-size: medium;
+  border: var(--color-bg-dark);
+  border-radius: 5px;
+  margin-left: 20px;
+  height: 28px;
+  width: 300px;
+  font-weight: bold;
+}
+
+.order-form__comment {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-size: 18px;
+  border: var(--color-bg-dark);
+  border-radius: 5px;
+  margin-left: 20px;
+  height: 100px;
+  width: 300px;
+  font-weight: bold;
+}
+
+.order-form__button {
+  display: inline-block;
+  padding: 10px 16px;
+  color: var(--color-text);
+  background-color: var(--color-accent);
+  text-decoration: none;
+  border-radius: 30px;
+  border-color: var(--color-bg-dark);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.order-form__button:hover{
+  background-color: var(--color-primary);
+}
+/*СТРАНИЦА ЗАКАЗА + ЗАЯВКА НА ЖАЛОБУ*/
+
+/*ПОДВАЛ*/
+.footer {
+  background-color: var(--color-text-dark);
+}
+
+.footer span{
+  font-size: 18px;
+  margin: 20px;
+  margin-bottom: 5px;
+}
+
+.footer__nav * {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  color: var(--color-text);
+}
+
+.footer__info {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  color: var(--color-text);
+}
+/*ПОДВАЛ*/

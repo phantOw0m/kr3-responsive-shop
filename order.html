@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Оформите заказ еды в Food & Joy. Быстрая доставка по Москве за 30 минут.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Оформление товара</title>
+</head>
+<body>
+    
+<!-- Хэдер-->
+<header> 
+  <div class = "site-header__content">
+
+    <!--Логотип с текстом-->
+    <div class = "site-header">
+      <a href = "index.html" class = "logo">
+        <span class = "logo__text">Food &amp; Joy</span>
+        <img class = "logo__img" src = "./images/Logo.png" alt = "Food &amp; Joy">
+      </a>
+      <h1 class = "site-header__title">
+        Вкусная еда с доставкой по москве от 30 минут
+      </h1>
+    </div>
+    <!--Логотип с текстом-->
+
+    <!--Навигация по сайту-->
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Товары</a></li>
+        <li><a href="order.html">Заказать</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+    <!--Навигация по сайту-->
+  </div>
+</header>
+<!-- Хэдер-->
+
+  <main>
+    
+    <section class="section">
+      <h1 class="section">Оформление заказа</h1>
+    </section>
+
+    <!-- Оформление заказа -->
+    <section class="hero">
+      <form class="order__form" action="#" method="post">
+
+        <div class="order-form__box">
+            <label for="order-name">
+              Имя
+            </label>
+            <input type="text" id="order-name" name="name" class="order-form__input" required>
+        </div>
+        
+        <div class="order-form__box">
+            <label for="order-email">
+              Email
+            </label>
+            <input type="email" id="order-email" name="email" class="order-form__input" required>
+        </div>
+        
+        <div class="order-form__box">
+            <label for="order-phone">
+              Телефон
+            </label>
+            <input type="tel" id="order-phone" name="phone" class="order-form__input" required>
+        </div>
+        
+        <div class="order-form__box"> 
+            <label for="order-product">
+              Выберите товар
+            </label>
+            <select id="order-product" name="product" class="order-form__input" required>
+                <option>Выберите товар</option> <!--Пока убрала value из выбора для упрощения-->
+                <option>Вкусный бургер</option>
+                <option>Картошка фри</option>
+                <option>Хрустящие нагетсы</option>
+                <option>Нежный милкшейк</option>
+                <option>Пицца маргарита</option>
+                <option>Большой сэндвич</option>
+            </select>
+        </div>
+        
+        <div class="order-form__box">
+            <label for="order-address">
+              Адрес доставки
+            </label>
+            <input type="text" id="order-address" name="address" class="order-form__input" required>
+        </div>
+        
+        <div class="order-form__box">
+            <label for="order-comment">
+              Комментарий к заказу
+            </label>
+            <textarea id="order-comment" name="comment" class="order-form__comment"></textarea>
+        </div>
+        
+        <div class="order-form__box">
+            <input type="checkbox" id="order-agree" name="agree" required>
+            <label for="order-agree">
+              Я согласен на обработку персональных данных*
+            </label>
+        </div>
+        
+        <button type="submit" class="order-form__button">
+          Оформить заказ
+        </button>
+
+      </form>
+    </section>
+    <!-- Оформление заказа -->
+
+  </main>
+
+  <!-- Подвал-->
+  <footer>
+    <div class = "footer">
+      <span>Food & Joy</span>
+      <nav class="footer__nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="order.html">Заказать</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="footer__info">
+        <p>&copy; 2026 Food & Joy. Все права защищены.</p>
+        <p>Телефон: +7(968)523-61-33</p>
+        <p>Email: samoshkina.m.k@edu.mirea.ru</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Подвал-->
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты Food & Joy: адрес, телефон, email, часы работы. Форма обратной связи.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Контактная информация</title>
+</head>
+<body>
+
+<!-- Хэдер-->
+<header> 
+  <div class = "site-header__content">
+
+    <!--Логотип с текстом-->
+    <div class = "site-header">
+      <a href = "index.html" class = "logo">
+        <span class = "logo__text">Food &amp; Joy</span>
+        <img class = "logo__img" src = "./images/Logo.png" alt = "Food &amp; Joy">
+      </a>
+      <h1 class = "site-header__title">
+        Вкусная еда с доставкой по москве от 30 минут
+      </h1>
+    </div>
+    <!--Логотип с текстом-->
+
+    <!--Навигация по сайту-->
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Товары</a></li>
+        <li><a href="order.html">Заказать</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+    <!--Навигация по сайту-->
+  </div>
+</header>
+<!-- Хэдер-->
+
+    <main>
+      <section class="contacts-info">
+      <h1>Свяжитесь с нами</h1>
+      <ul class="contacts-info__list">
+          <li>Адрес: г. Москва, ул. Бургерная, д. 1</li>
+          <li>Телефон: +7 (968) 523-61-33</li>
+          <li>Email: samoshkina.m.k@edu.mirea.ru</li>
+          <li>Часы работы: ежедневно с 9:00 до 23:00</li>
+      </ul>
+    </section>
+
+      <div class = "contacts-info__text">
+          <h2>Обработка жалоб</h2>
+          <p>Если у вас возникли жалобы, касаемо нашей работы 
+              — свяжитесь с нами <a href="index.html#contacts">любым удобным способом</a> 
+          </p>
+      </div>
+      
+      <!--Заявка жалоба, оформлена как заказ пока что для упрощения-->
+      <form class="hero" action="#" method="post">
+
+        <h2 class="contacts-form__title">или оставьте заявку на сайте.</h2>
+    
+        <div class="order-form__box">
+            <label for="name">
+              Имя
+            </label>
+            <input type="text" id="name" name="name" class="order-form__input" required>
+        </div>
+        
+        <div class="order-form__box">
+            <label for="email">
+              Email
+            </label>
+            <input type="email" id="email" name="email" class="order-form__input" required>
+        </div>
+        
+        <div class="order-form__box">
+            <label for="phone">
+              Телефон
+            </label>
+            <input type="tel" id="phone" name="phone" class="order-form__input">
+        </div>
+        
+        <div class="order-form__box">
+            <label for="message">
+              Сообщение
+            </label>
+            <textarea id="message" name="message" class="order-form__comment" required></textarea>
+        </div>
+        
+        <div class="order-form__box">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">
+              Я согласен на обработку персональных данных*
+            </label>
+        </div>
+
+        <button type="submit" class="order-form__button">
+          Отправить
+        </button>
+        <!--Заявка жалоба, оформлена как заказ пока что для упрощения-->
+        
+      </form>
+        
+    </main>
+
+    <!-- Подвал-->
+  <footer>
+    <div class = "footer">
+      <span>Food & Joy</span>
+      <nav class="footer__nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="order.html">Заказать</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="footer__info">
+        <p>&copy; 2026 Food & Joy. Все права защищены.</p>
+        <p>Телефон: +7(968)523-61-33</p>
+        <p>Email: samoshkina.m.k@edu.mirea.ru</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Подвал-->
+
+</body>
+</html>
