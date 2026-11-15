@@ -6,212 +6,170 @@
   <meta name="description" content="Food & Joy — вкусная еда с доставкой по Москве за 30 минут. Бургеры, пицца, закуски, милкшейки.">
   <title>Главная страница — Food &amp; Joy</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 
-<!-- Хэдер-->
-<header> 
-  <div class = "site-header__content">
+<body>
+  <a href="#main-content" class="skip-link">Перейти к содержимому</a>
+  <!-- Хэдер-->
+  <header> 
+    <div class = "site-header__content">
 
-    <!--Логотип с текстом-->
-    <div class = "site-header">
-      <a href = "index.html" class = "logo">
-        <span class = "logo__text">Food &amp; Joy</span>
-        <img class = "logo__img" src = "./images/Logo.png" alt = "Food &amp; Joy">
-      </a>
-      <h1 class = "site-header__title">
-        Вкусная еда с доставкой по москве от 30 минут
-      </h1>
-    </div>
-    <!--Логотип с текстом-->
-
-    <!--Навигация по сайту-->
-    <nav class="site-nav" aria-label="Основная навигация">
-      <ul class="site-nav__list">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Товары</a></li>
-        <li><a href="order.html">Заказать</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
-    <!--Навигация по сайту-->
-  </div>
-</header>
-<!-- Хэдер-->
-
-<!-- Основное содержимое страницы -->
-  <!--Навигация по главной странице-->
-<main>
-  <div class = "main-nav">
-    <h1>Главное по странице:</h1>
-      <ul>
-        <li><a href="#about__us">Про нас</a></li>
-        <li><a href="#popular">Лидеры продаж</a></li>
-        <li><a href="#advantages">Преимущества</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
-  </div>
-  <!--Навигация по главной странице-->
-
-  <!-- О проекте -->
-  <section class = "main-about" id = "about__us">
-    <h2>Большой выбор еды с доставкой по всей Москве</h2>
-    <p>
-      Food &amp; Joy — это не просто бургерная, а магазин еды с доставкой, 
-      где каждый найдёт что-то по душе. У нас есть всё, чтобы утолить голод: 
-      сочные бургеры с говяжьей котлетой, хрустящая картошка фри, 
-      золотистые наггетсы, ароматная пицца на тонком тесте, 
-      большие сэндвичи с несколькими слоями начинки и освежающие милкшейки, 
-      которые так приятно пить в жаркий день.
-    </p>
-    <p>
-      Мы готовим из свежих ингредиентов, которые привозим каждое утро. 
-      Булочки для бургеров печём сами — без заморозки и консервантов. 
-      Мясо, овощи и зелень проходят строгий отбор, чтобы каждый заказ 
-      был вкусным и безопасным. Наши повара знают, как сделать бургер 
-      сочным снаружи и внутри, а пиццу — с хрустящей корочкой.
-    </p>
-  </section>
-
-  <section class = "main-about">
-    <h2>Про нас</h2>
-    <p>
-      Всё началось в 1967 году, когда прабабка нашего основателя, 
-      Фудинина Джойинина, в период неурожая зажарила свою единственную корову. 
-      Отступать было некуда — она сделала из неё первый бургер. 
-      Еды хватило для того, чтобы поделиться с соседями. Так появилась первая 
-      маленькая бургерная на окраине города, где всегда пахло 
-      свежим мясом и тёплыми булочками.
-    </p>
-    <p>
-      С тех пор прошло больше полувека. Семейный рецепт передавался 
-      от поколения к поколению, а маленькая бургерная выросла 
-      в магазин еды с доставкой Food &amp; Joy, имя которому подарила пробабка Фудинина Джойинина.
-      Мы по-прежнему готовим так, как она учила: из свежих ингредиентов, 
-      с любовью и без спешки. Булочки печём сами, мясо отбираем 
-      вручную, а соусы делаем по тем самым старым рецептам.
-    </p>
-    <p>
-      Сегодня в меню не только бургеры. Но философия осталась прежней: 
-      еда должна быть вкусной, свежей и приносить радость. 
-      Доставляем по всей Москве за 30 минут — чтобы каждый мог 
-      попробовать кусочек той самой истории.
-    </p>
-  </section>
-  <!-- О проекте -->
-
-  <!-- Переход к товарам плашка-->
-  <section class="hero">
-    <h2>Взглянуть на меню</h2>
-    <p>
-      Уже проголодались? Переходите по кнопке ниже в каталог нашей еды
-      или ознакомьтесь с нашими хитами!
-    </p>
-    <a class="main-hero__button" href="catalog.html">
-      Хочу покушать!
-    </a>
-  </section>
-  <!-- Переход к товарам плашка-->
-
-  <!-- Лидеры продаж-->
-  <section class = "section" id = "popular">
-    <h2>У нас часто покупают</h2>
-      <div class = "catalog-grid">
-        <article class="catalog-card">
-          <span class="catalog-card__badge">ХИТ ПРОДАЖ!</span>
-          <h2>Вкусный бургер</h2>
-          <a class="button-product" href = "product.html"><img src = "./images/Product1.png" alt = "Товар 1"></a>
-        </article>
-
-     <article class="catalog-card">
-        <span class="catalog-card__badge">ХИТ ПРОДАЖ!</span>
-        <h2>Пицца маргарита</h2>
-        <a class="button-product" href = "product.html"><img src = "./images/Product5.png" alt = "Товар 5"></a>
-    </article>
-    </div>
-  </section>
-  <!-- Лидеры продаж-->
-
-  <!-- Плашка преимуществ-->
-  <section class="advantages" id = "advantages">
-    <h2>Что отличает нас от конкурентов?</h2>
-    <ul class="advantages__list">
-      <li>
-        <h3 class = "advantages__title">Быстрая доставка</h3>
-        <p>
-          Доставляем по всей Москве за 30 минут. Курьеры ездят 
-          на моноколёсах, поэтому еда приезжает горячей 
-          и свежей. Если опоздаем — следующий заказ за наш счёт.
-        </p>
-      </li>
-      <li>
-        <h3 class = "advantages__title">Приятные цены</h3>
-        <p>
-          Работаем напрямую с поставщиками, без посредников. 
-          Поэтому цены ниже, чем у конкурентов. А комбо-наборы 
-          делают заказ ещё выгоднее.
-        </p>
-      </li>
-      <li>
-        <h3 class = "advantages__title">Свежие ингредиенты</h3>
-        <p>
-          Каждое утро привозим свежее мясо, овощи и зелень. 
-          Булочки печём сами — без заморозки и консервантов. 
-          Всё, что не продали за день, списываем
-        </p>
-      </li>
-      <li>
-        <h3 class = "advantages__title">Сплочённая команда</h3>
-        <p>
-          Наши повара и курьеры работают вместе уже несколько лет. 
-          Каждый знает своё дело и любит его. Поэтому заказы 
-          собираются быстро и без ошибок.
-        </p>
-      </li>
-    </ul>
-  </section>
-  <!-- Плашка преимуществ-->
-
-  <!--Доп плашка с контактами-->
-    <aside class="hero" id = "contacts">
-    <h2>Остались вопросы?</h2>
-    <p>
-      Свяжитесь с нами в одном из мессенджеров
-    </p>
-    <div class="main-hero__socials">
-      <a class = "main-hero__link" href = "vk.com">
-        <img src = "./images/Vk_logo.png" alt="Ссылка на VK">
-      </a>
-      <a class = "main-hero__link" href = "telegram.com">
-        <img src = "./images/Tg_logo.png" alt="Ссылка на Telegram">
-      </a>
-      <a class = "main-hero__link" href = "what's up.com">
-        <img src = "./images/W_logo.png" alt="Ссылка на Ватсап">
-      </a>
-    </div>
-    </aside>
-</main>
-  <!--Доп плашка с контактами-->
-
-  <!-- Подвал-->
-  <footer>
-    <div class = "footer">
-      <span>Food & Joy</span>
-      <nav class="footer__nav">
-        <a href="index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="order.html">Заказать</a>
-        <a href="contacts.html">Контакты</a>
-      </nav>
-      <div class="footer__info">
-        <p>&copy; 2026 Food & Joy. Все права защищены.</p>
-        <p>Телефон: +7(968)523-61-33</p>
-        <p>Email: samoshkina.m.k@edu.mirea.ru</p>
-        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+      <!--Логотип с текстом-->
+      <div class = "site-header">
+        <a href = "index.html" class = "logo">
+          <span class = "logo__text">Food &amp; Joy</span>
+          <img class = "logo__img" src = "./images/Logo_g.gif" alt = "Food &amp; Joy">
+        </a>
+        <h1 class = "site-header__title">
+          Вкусная еда с доставкой по москве от 30 минут
+        </h1>
       </div>
+      <!--Логотип с текстом-->
+
+      <!--Навигация по сайту-->
+      <button class="nav-toggle" aria-label="Открыть меню">☰ Меню</button>
+      <nav class="site-nav" id="main-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Товары</a></li>
+          <li><a href="order.html">Заказать</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <!--Навигация по сайту-->
     </div>
-  </footer>
-  <!-- Подвал-->
+  </header>
+  <!-- Хэдер-->
+
+  <!-- Основное содержимое страницы -->
+    <!--Навигация по главной странице-->
+  <main id="main-content">
+    <div class = "main-nav">
+      <h1>Главное по странице</h1>
+        <ul class="main-nav__list">
+          <li><a href="#about__us">Про нас</a></li>
+          <li><a href="#popular">Лидеры продаж</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </div>
+    <!--Навигация по главной странице-->
+
+    <!-- hero блок -->
+  <section class="hero">
+    <div class="hero__content">
+      <h1>Вкусная еда с доставкой по Москве за 30 минут</h1>
+      <p>Проголодались? Переходите по кнопке ниже в каталог нашей еды
+        или ознакомьтесь с нашими хитами!</p>
+      <a class="main-hero__button" href="catalog.html">Взглянуть на меню</a>
+    </div>
+  </section>
+  <!-- hero блок -->
+
+    <!-- Лидеры продаж-->
+    <section class = "section" id = "popular">
+      <h2>У нас часто покупают</h2>
+        <div class = "catalog-grid">
+          <article class="catalog-card">
+            <span class="catalog-card__badge">ХИТ ПРОДАЖ!</span>
+            <h2>Вкусный бургер</h2>
+            <a class="button-product" href = "product.html"><img src = "./images/Product1.png" alt = "Товар 1"></a>
+          </article>
+
+      <article class="catalog-card">
+          <span class="catalog-card__badge">ХИТ ПРОДАЖ!</span>
+          <h2>Пицца маргарита</h2>
+          <a class="button-product" href = "product.html"><img src = "./images/Product5.png" alt = "Товар 5"></a>
+      </article>
+      </div>
+    </section>
+    <!-- Лидеры продаж-->
+
+    <!-- Плашка преимуществ-->
+    <section class="advantages" id = "advantages">
+      <h2>Что отличает нас от конкурентов?</h2>
+      <ul class="advantages__list">
+        <li>
+          <h3 class = "advantages__title">Быстрая доставка</h3>
+          <p>
+            Доставляем по всей Москве за 30 минут. Курьеры ездят 
+            на моноколёсах, поэтому еда приезжает горячей 
+            и свежей. Если опоздаем — следующий заказ за наш счёт.
+          </p>
+        </li>
+        <li>
+          <h3 class = "advantages__title">Приятные цены</h3>
+          <p>
+            Работаем напрямую с поставщиками, без посредников. 
+            Поэтому цены ниже, чем у конкурентов. А комбо-наборы 
+            делают заказ ещё выгоднее.
+          </p>
+        </li>
+        <li>
+          <h3 class = "advantages__title">Свежие ингредиенты</h3>
+          <p>
+            Каждое утро привозим свежее мясо, овощи и зелень. 
+            Булочки печём сами — без заморозки и консервантов. 
+            Всё, что не продали за день, списываем
+          </p>
+        </li>
+        <li>
+          <h3 class = "advantages__title">Сплочённая команда</h3>
+          <p>
+            Наши повара и курьеры работают вместе уже несколько лет. 
+            Каждый знает своё дело и любит его. Поэтому заказы 
+            собираются быстро и без ошибок.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- Плашка преимуществ-->
+
+    <!--Доп плашка с контактами-->
+      <aside class="hero" id = "contacts">
+      <h2>Остались вопросы?</h2>
+      <p>
+        Свяжитесь с нами в одном из мессенджеров
+      </p>
+      <div class="main-hero__socials">
+        <a class = "main-hero__link" href = "vk.com">
+          <img src = "./images/Vk_logo.png" alt="Ссылка на VK">
+        </a>
+        <a class = "main-hero__link" href = "telegram.com">
+          <img src = "./images/Tg_logo.png" alt="Ссылка на Telegram">
+        </a>
+        <a class = "main-hero__link" href = "what's up.com">
+          <img src = "./images/W_logo.png" alt="Ссылка на Ватсап">
+        </a>
+      </div>
+      </aside>
+  </main>
+    <!--Доп плашка с контактами-->
+
+    <!-- Подвал-->
+    <footer>
+      <div class = "footer">
+        <span>Food & Joy</span>
+        <nav class="footer__nav">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="order.html">Заказать</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+        <div class="footer__info">
+          <p>&copy; 2026 Food & Joy. Все права защищены.</p>
+          <p>Телефон: +7(968)523-61-33</p>
+          <p>Email: samoshkina.m.k@edu.mirea.ru</p>
+          <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Подвал-->
+
+<script src="js/main.js"></script>
 
 </body>
+
 </html>

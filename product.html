@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Вкусный бургер — 120 руб. Состав, калорийность, аллергены. Доставка за 30 минут.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Карточка товара</title>
 </head>
-<body>
 
+<body>
+<a href="#main-content" class="skip-link">Перейти к содержимому</a>
 <!-- Хэдер-->
 <header> 
   <div class = "site-header__content">
@@ -17,7 +19,7 @@
     <div class = "site-header">
       <a href = "index.html" class = "logo">
         <span class = "logo__text">Food &amp; Joy</span>
-        <img class = "logo__img" src = "./images/Logo.png" alt = "Food &amp; Joy">
+        <img class = "logo__img" src = "./images/Logo_g.gif" alt = "Food &amp; Joy">
       </a>
       <h1 class = "site-header__title">
         Вкусная еда с доставкой по москве от 30 минут
@@ -26,7 +28,8 @@
     <!--Логотип с текстом-->
 
     <!--Навигация по сайту-->
-    <nav class="site-nav" aria-label="Основная навигация">
+    <button class="nav-toggle" aria-label="Открыть меню">☰ Меню</button>
+    <nav class="site-nav" id="main-nav" aria-label="Основная навигация">
       <ul class="site-nav__list">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Товары</a></li>
@@ -39,7 +42,7 @@
 </header>
 <!-- Хэдер-->
 
-  <main>
+  <main id="main-content">
     <article class = "product-card-grid">
 
       <div class = "product-card">
@@ -57,25 +60,39 @@
           у вас на столе! 
         </p>
 
-        <table class="product__table">
-          <caption>Пищевая ценность</caption>
-          <thead>
-            <tr>
-              <th>Параметр</th>
-              <th>Значение</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Вес</td><td>350 г</td></tr>
-            <tr><td>Калорийность</td><td>550 ккал</td></tr>
-            <tr><td>Белки</td><td>25 г</td></tr>
-            <tr><td>Жиры</td><td>30 г</td></tr>
-            <tr><td>Углеводы</td><td>40 г</td></tr>
-            <tr><td>Аллергены</td><td>Глютен, лактоза</td></tr>
-          </tbody>
-        </table>
-        <a class="button-order" href = "order.html">Заказать!</a>
-      </div>
+       <div class="table-pc">
+          <table class="product__table">
+            <caption>Пищевая ценность</caption>
+            <thead>
+              <tr>
+                <th>Параметр</th>
+                <th>Значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Вес</td><td>350 г</td></tr>
+              <tr><td>Калорийность</td><td>550 ккал</td></tr>
+              <tr><td>Белки</td><td>25 г</td></tr>
+              <tr><td>Жиры</td><td>30 г</td></tr>
+              <tr><td>Углеводы</td><td>40 г</td></tr>
+              <tr><td>Аллергены</td><td>Глютен, лактоза</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-mobile">
+          <h3 class="table-mobile__title">Пищевая ценность</h3>
+          <ul class="table-mobile__list">
+            <li><span>Вес</span> <strong>350 г</strong></li>
+            <li><span>Калорийность</span> <strong>550 ккал</strong></li>
+            <li><span>Белки</span> <strong>25 г</strong></li>
+            <li><span>Жиры</span> <strong>30 г</strong></li>
+            <li><span>Углеводы</span> <strong>40 г</strong></li>
+            <li><span>Аллергены</span> <strong>Глютен, лактоза</strong></li>
+          </ul>
+        </div>
+
+         <a class="button-order" href="order.html">Заказать!</a>
     </article>
 
   </main>
@@ -100,5 +117,6 @@
   </footer>
   <!-- Подвал-->
 
+<script src="js/main.js"></script>
 </body>
 </html>
